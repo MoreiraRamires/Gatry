@@ -1,6 +1,5 @@
-import './App.css';
+import React from"react"
 import PromotionCard from 'components/Promotion/Card/Card';
-
 
 const promotionData = {
   "id": 1,
@@ -15,20 +14,17 @@ const promotionData = {
     }
   ]
 }
-
-
-function App() {
-  return (
-    <div className="App"
+const PagesPromotionSearch  = () => {
+  return(
+    <div 
     style={{
       maxWidth:800,
       margin:'30px auto',
 
-    }}>
+    }}> 
       <PromotionCard promotion={promotionData}/>
-
     </div>
-  );
-}
+  )
+};
 
-export default App;
+export default PagesPromotionSearch;
