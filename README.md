@@ -17,7 +17,7 @@
 
 O layout da aplicação está disponível no Figma:
 
-<a href="https://www.figma.com/file/UlHLPKhbIK1WxTqUV0e2e7/Teste-t%C3%A9cnico%3A-Pessoa-desenvolvedora-Front-end?node-id=3%3A606">
+<a href="">
   <img alt="" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
 
@@ -25,17 +25,17 @@ O layout da aplicação está disponível no Figma:
 ### Mobile
 
 <p align="center">
-  <img alt="A Copa do Mundo de Jogos Lambda3" title="#CopaLambda3k" src="./assets/banner-moblie.png" width="200px">
+  <img alt="" title="#CopaLambda3k" src="./assets/banner-moblie.png" width="200px">
 
-  <img alt="A Copa do Mundo de Jogos Lambda3" title="#CopaLambda3" src="./assets/jogo-mobile.png" width="200px">
+  <img alt="" title="#CopaLambda3" src="./assets/jogo-mobile.png" width="200px">
 </p>
 
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="A Copa do Mundo de Jogos Lambda3" title="#CopaLambda3" src="./assets/banner.png" width="400px">
+  <img alt="" title="#CopaLambda3" src="./assets/banner.png" width="400px">
 	
-  <img alt="A Copa do Mundo de Jogos Lambda3" title="#CopaLambda3" src="./assets/jogo.png" width="200px">
+  <img alt="" title="#CopaLambda3" src="./assets/jogo.png" width="200px">
 </p>
 
 ## 🛠 Tecnologias
@@ -68,7 +68,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode][vsco
 $ git clone https://github.com/MoreiraRamires/lambda3teste.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
+$ cd new-app
 
 # Vá para a pasta server
 $ cd server
@@ -89,7 +89,7 @@ $ npm run dev:server
 $ git clone https://github.com/MoreiraRamires/Gatry.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd nlw1
+$ cd new-app
 
 # Vá para a pasta da aplicação Front End
 $ cd web
