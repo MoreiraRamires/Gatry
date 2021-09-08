@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import './Search.css';
 import PromotionCard from 'components/Promotion/Card/Card';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const PromotionSearch = () => {
@@ -12,7 +14,14 @@ const PromotionSearch = () => {
     },[]);
 
     return(
-      <div>
+      <div className="promotion-search">
+        <header className="promotion-search__header">
+          <h1>Promo Show</h1>
+          <Link to="/create">Nova Promoção</Link>
+        </header>
+      
+          <input className="promotion-search__input" type="search" name="" id="" />
+
       {promotions.map((promotion) => (
         <PromotionCard promotion={promotion} />
       ))}
