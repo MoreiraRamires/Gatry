@@ -6,12 +6,19 @@ import axios from 'axios';
 
 const PromotionSearch = () => {
   const [promotions, setPromotions] = useState([]);
+  const [search,setSearch] = useState("")
     useEffect(() => {
-      axios.get('http://localhost:5000/promotions?_embed=comments')
+      //realizar a busca - aula 06 - 30min
+      const params ={}
+      if(search){
+        params.title_like=search
+      }
+
+      axios.get('http://localhost:5000/promotions?_embed=comments', {params})
         .then((response) => {
           setPromotions(response.data);
         });
-    },[]);
+    },[search]);
 
     return(
       <div className="promotion-search">
@@ -20,7 +27,13 @@ const PromotionSearch = () => {
           <Link to="/create">Nova Promoção</Link>
         </header>
       
-          <input className="promotion-search__input" type="search" name="" id="" />
+          <input 
+          className="promotion-search__input" 
+          placeholder="Buscar"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          type="search" name="" id="" 
+          />
 
       {promotions.map((promotion) => (
         <PromotionCard promotion={promotion} />
