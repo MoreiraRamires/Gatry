@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="Gatry" title="#lambda3" src="./assets/banner.png" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center"> 
+	🚧 ReactJS para Iniciantes - GATRY- curso com Vinicius Dacal 1.0 🚀 em construção... 🚧
+</h3>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+## 💻 Sobre o projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎨 Layout
 
-### `yarn build`
+O layout da aplicação está disponível no Figma:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a href="https://www.figma.com/file/UlHLPKhbIK1WxTqUV0e2e7/Teste-t%C3%A9cnico%3A-Pessoa-desenvolvedora-Front-end?node-id=3%3A606">
+  <img alt="" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+</a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Mobile
 
-### `yarn eject`
+<p align="center">
+  <img alt="A Copa do Mundo de Jogos Lambda3" title="#CopaLambda3k" src="./assets/banner-moblie.png" width="200px">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  <img alt="A Copa do Mundo de Jogos Lambda3" title="#CopaLambda3" src="./assets/jogo-mobile.png" width="200px">
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Web
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="A Copa do Mundo de Jogos Lambda3" title="#CopaLambda3" src="./assets/banner.png" width="400px">
+	
+  <img alt="A Copa do Mundo de Jogos Lambda3" title="#CopaLambda3" src="./assets/jogo.png" width="200px">
+</p>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🛠 Tecnologias
 
-## Learn More
+As seguintes ferramentas foram usadas na construção do projeto:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [React][reactjs]
+- [Axios][axios]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## 🚀 Como executar o projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Podemos considerar este projeto como sendo divido em duas partes:
+1. Back End (pasta server) 
+2. Front End (pasta web)
+3. Mobile (pasta mobile)
 
-### Analyzing the Bundle Size
+💡Tanto o Front End quanto o Mobile precisam que o Back End esteja sendo executado para funcionar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Pré-requisitos
 
-### Making a Progressive Web App
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js][nodejs]. 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 🎲 Rodando o Back End (servidor)
 
-### Advanced Configuration
+```bash
+# Clone este repositório
+$ git clone https://github.com/MoreiraRamires/lambda3teste.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Acesse a pasta do projeto no terminal/cmd
+$ cd nlw1
 
-### Deployment
+# Vá para a pasta server
+$ cd server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Instale as dependências
+$ npm install
 
-### `yarn build` fails to minify
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev:server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# O servidor inciará na porta:3333 - acesse http://localhost:3333 
+```
+
+### 🧭 Rodando a aplicação web (Front End)
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/MoreiraRamires/Gatry.git
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd nlw1
+
+# Vá para a pasta da aplicação Front End
+$ cd web
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run start
+
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+```
+
+### 📱Rodando a aplicação mobile 
+
+🚧 Em construção... 🚧
+
+## 😯 Como contribuir para o projeto
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+
+
+## 📝 Licença
+
+Este projeto esta sobe a licença MIT.
+
+Feito com ❤️ por Rafael Ramires 👋🏽 [Entre em contato!](https://www.linkedin.com/in/rafael-ramires-791aa378/)
+
+[nodejs]: https://nodejs.org/
+[typescript]: https://www.typescriptlang.org/
+[reactjs]: https://reactjs.org
+[yarn]: https://yarnpkg.com/
+[vscode]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[license]: https://opensource.org/licenses/MIT
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
