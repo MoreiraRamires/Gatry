@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Search.css';
 import PromotionCard from 'components/Promotion/Card/Card';
+import PromotionList from 'components/Promotion/List/List';
+
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -11,7 +13,7 @@ const PromotionSearch = () => {
       //realizar a busca - aula 06 - 30min
       const params ={}
       if(search){
-        params.title_like=search
+        params.title_like=search //nao esqueca o _like
       }
 
       axios.get('http://localhost:5000/promotions?_embed=comments', {params})
@@ -35,9 +37,7 @@ const PromotionSearch = () => {
           type="search" name="" id="" 
           />
 
-      {promotions.map((promotion) => (
-        <PromotionCard promotion={promotion} />
-      ))}
+        <PromotionList promotions={promotions} loading={!promotions.length}/>
     </div>
     )
 }
