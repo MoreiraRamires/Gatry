@@ -16,4 +16,4 @@ const PromotionList = ({ loading, promotions }) => {
   );
 }
 
-export default PromotionList;
+export default React.memo(PromotionList);
