@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img alt="Gatry" title="#lambda3" src="./assets/banner.png" />
+    <img alt="Gatry" title="#gatry" src="./assets/banner.png" />
 </h1>
 
 <h3 align="center"> 
-	🚧 ReactJS para Iniciantes - GATRY- curso com Vinicius Dacal 1.0 🚀 em construção... 🚧
+	🚧GATRY 🚀 em construção... 🚧
 </h3>
 
 
@@ -65,7 +65,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode][vsco
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/MoreiraRamires/lambda3teste.git
+$ git clone https://github.com/MoreiraRamires/gatry.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd new-app
