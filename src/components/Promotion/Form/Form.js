@@ -10,7 +10,7 @@ const initialValue ={
   price:0,
 }
 const PromotionForm = ({id}) => {
-  const [values,setValues] = useState(initialValue);
+  const [values,setValues] = useState(id ? null : initialValue); // iniciei com null para ter a opção carregando if linha 27
   const history = useHistory()
 
 
@@ -24,7 +24,9 @@ useEffect(()=>{ // vou iniciar um request quando meu componente for montado. Igu
   }
 },[]);// o segundo parametro representa o que será ouvido para que o useEffect seja acionado novamente. O vazio significa que o hook sera acionado apenas quando o componente montar.
 
-
+ if ( !values){
+   return ( <div> Carregando</div>)
+ }
   function onChange(e){
     const {name,value} = e.target
     console.log({name,value})
