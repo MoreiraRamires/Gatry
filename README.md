@@ -1,5 +1,5 @@
 
-https://img.shields.io/badge/Curso-Vinicius%20Dacal-red
+
 ![GitHub](https://img.shields.io/github/license/MoreiraRamires/Gatry)
 <h1 align="center">
     <img alt="Gatry" title="#gatry" src="./assets/banner.png" />
@@ -14,32 +14,7 @@ https://img.shields.io/badge/Curso-Vinicius%20Dacal-red
 ## 💻 Sobre o projeto
 
 
-
-
-## 🎨 Layout
-
-O layout da aplicação está disponível no Figma:
-
-<a href="">
-  <img alt="" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
-</a>
-
-
-### Mobile
-
-<p align="center">
-  <img alt="" title="#CopaLambda3k" src="./assets/banner-moblie.png" width="200px">
-
-  <img alt="" title="#CopaLambda3" src="./assets/jogo-mobile.png" width="200px">
-</p>
-
-### Web
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="" title="#CopaLambda3" src="./assets/banner.png" width="400px">
-	
-  <img alt="" title="#CopaLambda3" src="./assets/jogo.png" width="200px">
-</p>
+Projeto realizado durante o curso de React do professor Vinicius Dacal.
 
 ## 🛠 Tecnologias
 
@@ -52,9 +27,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## 🚀 Como executar o projeto
 
 Podemos considerar este projeto como sendo divido em duas partes:
-1. Back End (pasta server) 
-2. Front End (pasta web)
-3. Mobile (pasta mobile)
+1. Back End (pasta api) 
+2. Front End (pasta new-app)
+
 
 💡Tanto o Front End quanto o Mobile precisam que o Back End esteja sendo executado para funcionar.
 
