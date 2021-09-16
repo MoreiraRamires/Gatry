@@ -118,7 +118,7 @@ $ npm run start
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença MIT.
+https://github.com/MoreiraRamires/Gatry/edit/master/README.md
 
 Feito com ❤️ por Rafael Ramires 👋🏽 [Entre em contato!](https://www.linkedin.com/in/rafael-ramires-791aa378/)
 
