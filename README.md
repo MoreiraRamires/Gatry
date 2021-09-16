@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/MoreiraRamires/Gatry)
 <h1 align="center">
-    <img alt="Gatry" title="#gatry" src="./assets/banner.png" />
+    <img alt="Gatry" title="#gatry" src="src/assets/banner.png" />
 </h1>
 
 <h3 align="center"> 
