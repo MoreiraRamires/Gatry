@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import './Search.css';
-import PromotionCard from 'components/Promotion/Card/Card';
 import PromotionList from 'components/Promotion/List/List';
 
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import useApi from 'components/utils/useApi'
 
 const PromotionSearch = () => {
-  const [promotions, setPromotions] = useState([]);
   const [search,setSearch] = useState("")
-    useEffect(() => {
-      //realizar a busca - aula 06 - 30min
-      const params ={}
-      if(search){
-        params.title_like=search //nao esqueca o _like
-      }
+  const [load, loadInfo] = useApi({
+    url:'/promotions?',
+    method:'get',
+    params:{
+      _embed:"comments",
+      _order:"desc",
+      _sort:"id",
+      title_like:search || undefined,    //title_like => realizar a busca - aula 06 - 30min
+    },
+  })
 
-      axios.get('http://localhost:5000/promotions?_embed=comments&_order=desc&_sort=id', {params})
-        .then((response) => {
-          setPromotions(response.data);
-        });
+    useEffect(() => {
+   
+      load();
     },[search]);
 
     return(
@@ -37,7 +38,11 @@ const PromotionSearch = () => {
           type="search" name="" id="" 
           />
 
-        <PromotionList promotions={promotions} loading={!promotions.length}/>
+        <PromotionList 
+          promotions={loadInfo.data} 
+          loading={loadInfo.loading}
+          error={loadInfo.error}
+        />
     </div>
     )
 }

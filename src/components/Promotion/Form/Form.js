@@ -1,7 +1,9 @@
 import React ,{useEffect, useState}from 'react'
 import { useHistory } from 'react-router';
 import './Form.css';
-import axios from "axios";
+import useApi from 'components/utils/useApi'
+import axios from 'axios';
+
 
 const initialValue ={
   title:"",
@@ -12,17 +14,28 @@ const initialValue ={
 const PromotionForm = ({id}) => {
   const [values,setValues] = useState(id ? null : initialValue); // iniciei com null para ter a opção carregando if linha 27
   const history = useHistory()
-
-
+  const [load] = useApi({
+    url:`/promotions/${id}`,
+    method:'get',
+    onCompleted:(response) =>{
+      setValues(response.data);
+    },
+  })
+  const [save, saveInfo] = useApi({
+    url : id
+      ?`promotions/${id}`:'promotions',
+    method : id ? 'put' : 'post',
+    onCompleted:(response) =>{
+      if(response.error){
+        history.push("/")//redirecionar para a página de listagem - hook
+      }
+    },
+  })
 useEffect(()=>{ // vou iniciar um request quando meu componente for montado. Igual na listagem
   if(id){ // o id representa que estou trabalhando com uma edicao 
-    axios.get(`http://localhost:5000/promotions/${id}`)
-      .then((response) => {
-        
-        setValues(response.data);
-    })
+   load()
   }
-},[]);// o segundo parametro representa o que será ouvido para que o useEffect seja acionado novamente. O vazio significa que o hook sera acionado apenas quando o componente montar.
+},[id]);// o segundo parametro representa o que será ouvido para que o useEffect seja acionado novamente. O vazio significa que o hook sera acionado apenas quando o componente montar.
 
  if ( !values){
    return ( <div> Carregando</div>)
@@ -36,17 +49,9 @@ useEffect(()=>{ // vou iniciar um request quando meu componente for montado. Igu
 
   function onSubmit(e){
     e.preventDefault();
-
-    const method = id ? 'put' : 'post';
-    const url = id
-    ?`http://localhost:5000/promotions/${id}`
-    :'http://localhost:5000/promotions'
-
-    axios[method](url,values)
-    .then((response)=>{
-      history.push("/") //redirecionar para a página de listagem - hook
+    save({
+      data:values,
     })
-    
   }
   return(
 
@@ -54,6 +59,7 @@ useEffect(()=>{ // vou iniciar um request quando meu componente for montado. Igu
       <h1>Promotion</h1>
       <h2>Nova Promoção</h2>
       <form onSubmit={onSubmit}>
+        {saveInfo.loading && <span>Salvando dados</span>}
         <div className="promotion-form__group">
           <label htmlFor="title">Titulo</label>
           <input id="title"type="text" name="title" onChange={onChange} value={values.title}/> 
