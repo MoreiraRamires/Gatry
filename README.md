@@ -1,3 +1,6 @@
+
+https://img.shields.io/badge/Curso-Vinicius%20Dacal-red
+![GitHub](https://img.shields.io/github/license/MoreiraRamires/Gatry)
 <h1 align="center">
     <img alt="Gatry" title="#gatry" src="./assets/banner.png" />
 </h1>
@@ -118,7 +121,7 @@ $ npm run start
 
 ## 📝 Licença
 
-https://github.com/MoreiraRamires/Gatry/edit/master/README.md
+![GitHub](https://img.shields.io/github/license/MoreiraRamires/Gatry)
 
 Feito com ❤️ por Rafael Ramires 👋🏽 [Entre em contato!](https://www.linkedin.com/in/rafael-ramires-791aa378/)
 
@@ -131,4 +134,3 @@ Feito com ❤️ por Rafael Ramires 👋🏽 [Entre em contato!](https://www.lin
 [license]: https://opensource.org/licenses/MIT
 [vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 [prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-
