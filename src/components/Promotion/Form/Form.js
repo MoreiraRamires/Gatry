@@ -2,7 +2,6 @@ import React ,{useEffect, useState}from 'react'
 import { useHistory } from 'react-router';
 import './Form.css';
 import useApi from 'components/utils/useApi'
-import axios from 'axios';
 
 
 const initialValue ={
@@ -11,6 +10,7 @@ const initialValue ={
   imageUrl:"",
   price:0,
 }
+
 const PromotionForm = ({id}) => {
   const [values,setValues] = useState(id ? null : initialValue); // iniciei com null para ter a opção carregando if linha 27
   const history = useHistory()
@@ -26,7 +26,7 @@ const PromotionForm = ({id}) => {
       ?`promotions/${id}`:'promotions',
     method : id ? 'put' : 'post',
     onCompleted:(response) =>{
-      if(response.error){
+      if(!response.error){
         history.push("/")//redirecionar para a página de listagem - hook
       }
     },
